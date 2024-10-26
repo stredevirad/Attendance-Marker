@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Manager</h1>
+        <form id="attendance-form">
+            <label for="totalClasses">Total Classes Conducted:</label>
+            <input type="number" id="totalClasses" required>
+
+            <label for="attendedClasses">Classes Attended:</label>
+            <input type="number" id="attendedClasses" required>
+
+            <label for="requiredPercentage">Minimum Required Attendance %:</label>
+            <input type="number" id="requiredPercentage" value="75" required>
+
+            <button type="button" onclick="calculateAttendance()">Calculate</button>
+        </form>
+
+        <div id="results">
+            <p id="attendanceResult"></p>
+            <p id="allowableMissedResult"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
